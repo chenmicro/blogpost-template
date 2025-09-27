@@ -26,6 +26,14 @@
 
     <label for="sidebar-checkbox" class="sidebar-toggle"></label>
 
+    <script>
+      window.addEventListener("load", async () => {
+        mermaid.initialize({ startOnLoad: false });
+        await mermaid.run({
+          querySelector: '.language-mermaid',
+        });
+      })
+    </script>
     <script src='{{ site.baseurl }}/public/js/script.js'></script>
   </body>
 </html>
